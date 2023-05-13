@@ -1,7 +1,7 @@
 ## siamese_net
 An implementation of a siamese network model for unsupervised image feature representation.
 
-# background
+# Background
 I needed an unsupervised model for image feature representation to use as part of another project I have been working on, so I put this little guy together in pytorch.
 A siamese network is an unsupervised model that learns to distinguish between inputs. The way it does this is as follows: at each step of the training, the network
 gets three images. The first image is passed through the network and its output is computed. The second image is chosen such that it is similar to the first image. In
