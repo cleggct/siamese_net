@@ -16,7 +16,7 @@ as different ones.
 The network consisted of a fairly straight-forward CNN. I took some care with the dilation of each convolution in accordance with the method of dilated upsampling convolution. You
 can read more about that here: https://arxiv.org/abs/1702.08502. The model was trained on the CIFAR-10 dataset, which consists of small (32 by 32) images each labeled as belonging
 to one of ten categories. I thought working with smaller images would make things easier for my model, and since I was training this thing on my personal machine, it needed all the
-help it could get! Images were normalized prior to being fed to the model. The output of the network is a 64-dimensional vector meant to give a feature representation of the input.
+help it could get! Images were normalized prior to being fed to the model. The output of the network is a 64-dimensional vector meant to give a lower-dimensional feature representation of the input.
 
 Initially I was having difficulty with the choice of loss function. MSE isn't very good because it tends to not be very sensitive to smaller differences in vectors, and additionally
 the network was learning to minimize the MSE by essentially just outputting 0 for every input. Given these issues, you might consider another distance metric such as the L1 norm.
